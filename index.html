@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maruful's Calculator Free</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="calculator-container">
+    
+    <div class="calc-identity-bar">
+      <div class="logo-wrapper">
+        <img src="M cal.png" alt="Maruful's Calculator Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">MARUFUL'S</span>
+          <span class="brand-sub">CALCULATOR</span>
+        </div>
+      </div>
+      <div class="edition-pill">FREE</div>
+    </div>
+
+    <header class="calc-header">
+      <div class="mode-switcher">
+        <button class="mode-btn active" data-mode="basic">Basic</button>
+        <button class="mode-btn" data-mode="business">Business</button>
+        <button class="mode-btn" data-mode="scientific">Scientific</button>
+      </div>
+    </header>
+
+    <div class="calc-display">
+      <div class="history-line" id="historyDisplay"></div>
+      <div class="main-line" id="mainDisplay">0</div>
+    </div>
+
+    <div class="calc-keypad">
+
+      <div class="key-panel scientific-keys" id="scientificPanel">
+        <button class="btn btn-sci" data-action="sin">sin</button>
+        <button class="btn btn-sci" data-action="cos">cos</button>
+        <button class="btn btn-sci" data-action="tan">tan</button>
+        <button class="btn btn-sci" data-action="deg-rad" id="angleUnitBtn">Deg</button>
+        <button class="btn btn-sci" data-action="ln">ln</button>
+        <button class="btn btn-sci" data-action="log">log</button>
+        <button class="btn btn-sci" data-action="pow">xʸ</button>
+        <button class="btn btn-sci" data-action="sqr">x²</button>
+        <button class="btn btn-sci" data-action="fact">x!</button>
+        <button class="btn btn-sci" data-action="inv">1/x</button>
+        <button class="btn btn-sci" data-action="pi">π</button>
+        <button class="btn btn-sci" data-action="e">e</button>
+        <button class="btn btn-sci" data-action="open-paren">(</button>
+        <button class="btn btn-sci" data-action="close-paren">)</button>
+        <button class="btn btn-sci" data-action="abs">|x|</button>
+      </div>
+
+      <div class="key-panel business-keys" id="businessPanel">
+        <button class="btn btn-biz" data-action="tax-plus">Tax + (15%)</button>
+        <button class="btn btn-biz" data-action="tax-minus">Tax − (15%)</button>
+        <button class="btn btn-biz" data-action="cost">Cost</button>
+        <button class="btn btn-biz" data-action="sell">Sell</button>
+        <button class="btn btn-biz" data-action="margin">Margin %</button>
+        <button class="btn btn-biz" data-action="gt">GT</button>
+      </div>
+
+      <div class="key-panel common-keys">
+        <button class="btn btn-func" data-action="clear">AC</button>
+        <button class="btn btn-func" data-action="delete">⌫</button>
+        <button class="btn btn-func" data-action="sqrt">√</button>
+        <button class="btn btn-func" data-action="percent">%</button>
+
+        <button class="btn btn-num" data-num="7">7</button>
+        <button class="btn btn-num" data-num="8">8</button>
+        <button class="btn btn-num" data-num="9">9</button>
+        <button class="btn btn-op" data-op="÷">÷</button>
+
+        <button class="btn btn-num" data-num="4">4</button>
+        <button class="btn btn-num" data-num="5">5</button>
+        <button class="btn btn-num" data-num="6">6</button>
+        <button class="btn btn-op" data-op="×">×</button>
+
+        <button class="btn btn-num" data-num="1">1</button>
+        <button class="btn btn-num" data-num="2">2</button>
+        <button class="btn btn-num" data-num="3">3</button>
+        <button class="btn btn-op" data-op="-">−</button>
+
+        <button class="btn btn-num" data-num="0">0</button>
+        <button class="btn btn-num" data-num="00">00</button>
+        <button class="btn btn-num" data-num=".">.</button>
+        <button class="btn btn-op" data-op="+">+</button>
+
+        <button class="btn btn-equals" data-action="calculate">=</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
